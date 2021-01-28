@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "Donald Blake",
+    "email": "thor@asgard.com"
+  },
+  {
+    "id": "2",
+    "name": "Robert Bruce Banner",
+    "email": "green@monster.com"
+  },
+  {
+    "id": "3",
+    "name": "Anthony Edward Stark",
+    "email": "iron@suit.com"
+  },
+  {
+    "id": "4",
+    "name": "Natasha Romanoff",
+    "email": "black@widow.com"
+  },
+  {
+    "id": "5",
+    "name": "Clinton Francis Barton",
+    "email": "hawk@eye.com"
+  },
+  {
+    "id": "6",
+    "name": "Steven Rogers",
+    "email": "round@shield.com"
+  }
+]

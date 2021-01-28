@@ -1,0 +1,8 @@
+.drag-area {
+  width: 350px;
+  height: 550px;
+  margin: 30px auto;
+  border: 1px solid #bdbdbd;
+  box-shadow: 5px 5px 10px #888888;
+  background-color: #fbfbfb;
+}

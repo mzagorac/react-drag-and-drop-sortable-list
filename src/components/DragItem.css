@@ -1,0 +1,9 @@
+.drag-item {
+  width: 320px;
+  height: 25px;
+  border: 1px solid #bdbdbd;
+  background-color: white;
+  margin: 5px auto;
+  cursor: grab;
+  padding-bottom: 10px;
+}
