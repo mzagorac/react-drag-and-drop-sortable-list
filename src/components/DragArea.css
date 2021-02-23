@@ -1,6 +1,7 @@
 .drag-area {
   width: 350px;
-  height: 550px;
+  /* height: 550px; */
+  padding: 1rem 0 5rem;
   margin: 30px auto;
   border: 1px solid #bdbdbd;
   box-shadow: 5px 5px 10px #888888;

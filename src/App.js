@@ -7,7 +7,7 @@ data.forEach((item) => console.log(item.name));
 function App() {
   return (
     <div className="App">
-      <h2>Drag 'n Drop sortable list</h2>
+      <h2>Sort Avengers</h2>
       <DraggableUsersList />
     </div>
   );

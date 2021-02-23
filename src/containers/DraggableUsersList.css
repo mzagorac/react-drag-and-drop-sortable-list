@@ -2,3 +2,12 @@ li {
   margin: 5px;
   list-style: none;
 }
+
+li span {
+  display: block;
+}
+
+li span:last-child {
+  color: grey;
+  font-size: 0.9rem;
+}
