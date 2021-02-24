@@ -5,4 +5,5 @@
   margin: auto;
   cursor: grab;
   padding: 0.5rem 0;
+  border-bottom: none;
 }
