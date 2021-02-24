@@ -1,20 +1,26 @@
 import React, { useState, useRef } from "react";
-import { findDomElement } from "../utils";
+import { findDomElement, reorderArrayElements } from "../utils";
 import "./DragArea.css";
 
-export default function DragArea({ children, users, draggedElement }) {
+export default function DragArea({
+  children,
+  users,
+  setUsers,
+  draggedElement,
+}) {
   const [draggedOverEl, setDraggedOverEl] = useState();
   const targetEl = useRef();
 
   function dropHandler(e) {
     e.preventDefault();
 
-    const parent = targetEl.current;
-
-    if (parent === draggedOverEl) {
-      e.target.appendChild(draggedElement);
-    } else {
-      parent.insertBefore(draggedElement, draggedOverEl);
+    if (draggedElement && draggedOverEl) {
+      const reorderedUsers = reorderArrayElements(
+        users,
+        Number(draggedElement.id),
+        Number(draggedOverEl.id)
+      );
+      setUsers(reorderedUsers);
     }
 
     draggedElement.style = "";
