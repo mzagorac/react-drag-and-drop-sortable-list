@@ -1,12 +1,13 @@
 import React from "react";
 import "./DragItem.css";
 
-export default function DragItem({ children, id, index }) {
+export default function DragItem({ children, id, index, handleDraggedEl }) {
   function dragStartHandler(e) {
     e.target.style.opacity = "0.3";
 
+    handleDraggedEl(e.target);
+
     e.dataTransfer.effectAllowed = "move";
-    e.dataTransfer.setData("text", e.target.id);
   }
 
   return (

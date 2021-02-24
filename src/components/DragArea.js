@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { findDomElement } from "../utils";
 import "./DragArea.css";
 
-export default function DragArea({ children, users }) {
+export default function DragArea({ children, users, draggedElement }) {
   const [user, setUser] = useState();
+  const targetEl = useRef();
 
   function dropHandler(e) {
     e.preventDefault();
-    const data = e.dataTransfer.getData("text");
 
-    const draggedElement = document.getElementById(data);
-    const parent = document.getElementById("target");
+    const parent = targetEl.current;
 
     if (parent === user) {
-      e.target.appendChild(document.getElementById(data));
+      e.target.appendChild(draggedElement);
     } else {
       parent.insertBefore(draggedElement, user);
     }
@@ -29,6 +28,7 @@ export default function DragArea({ children, users }) {
 
   return (
     <div
+      ref={targetEl}
       id="target"
       className="drag-area"
       onDragOver={dragOverHandler}

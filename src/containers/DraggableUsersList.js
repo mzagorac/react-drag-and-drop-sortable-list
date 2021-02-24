@@ -6,11 +6,22 @@ import "./DraggableUsersList.css";
 
 export default function DraggableUsersList() {
   const [users] = useState(usersList);
+  const [draggedElement, setDraggedEl] = useState(null);
+
+  function handleDraggedEl(el) {
+    setDraggedEl(el);
+  }
+
   return (
     <ul>
-      <DragArea users={users}>
+      <DragArea users={users} draggedElement={draggedElement}>
         {users.map((user, i) => (
-          <DragItem id={user.id} index={i} key={user.id}>
+          <DragItem
+            id={user.id}
+            index={i}
+            key={user.id}
+            handleDraggedEl={handleDraggedEl}
+          >
             <li>
               <span id="username">{user.name}</span>
               <span id="email">{user.email}</span>
