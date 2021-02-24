@@ -3,7 +3,7 @@ import { findDomElement } from "../utils";
 import "./DragArea.css";
 
 export default function DragArea({ children, users, draggedElement }) {
-  const [user, setUser] = useState();
+  const [draggedOverEl, setDraggedOverEl] = useState();
   const targetEl = useRef();
 
   function dropHandler(e) {
@@ -11,10 +11,10 @@ export default function DragArea({ children, users, draggedElement }) {
 
     const parent = targetEl.current;
 
-    if (parent === user) {
+    if (parent === draggedOverEl) {
       e.target.appendChild(draggedElement);
     } else {
-      parent.insertBefore(draggedElement, user);
+      parent.insertBefore(draggedElement, draggedOverEl);
     }
 
     draggedElement.style = "";
@@ -23,7 +23,7 @@ export default function DragArea({ children, users, draggedElement }) {
   function dragOverHandler(e) {
     e.preventDefault();
 
-    setUser(findDomElement(e.target));
+    setDraggedOverEl(findDomElement(e.target));
   }
 
   return (
