@@ -1,4 +1,5 @@
-export function findDomElement(elememt) {
-  if (elememt.id) return elememt;
-  return findDomElement(elememt["parentNode"]);
+export function findDomElement(element) {
+  if (!element) return;
+  if (element?.id && Number.isInteger(Number(element.id))) return element;
+  return findDomElement(element["parentNode"]);
 }

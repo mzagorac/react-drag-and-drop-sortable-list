@@ -8,12 +8,12 @@ export default function DraggableUsersList() {
   const [users] = useState(usersList);
   return (
     <ul>
-      <DragArea>
+      <DragArea users={users}>
         {users.map((user, i) => (
           <DragItem id={user.id} index={i} key={user.id}>
             <li>
-              <span>{user.name}, </span>
-              <span>{user.email}</span>
+              <span id="username">{user.name}</span>
+              <span id="email">{user.email}</span>
             </li>
           </DragItem>
         ))}

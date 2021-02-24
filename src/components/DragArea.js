@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { findDomElement } from "../utils";
 import "./DragArea.css";
 
-export default function DragArea({ children }) {
+export default function DragArea({ children, users }) {
   const [user, setUser] = useState();
 
   function dropHandler(e) {
@@ -17,6 +17,8 @@ export default function DragArea({ children }) {
     } else {
       parent.insertBefore(draggedElement, user);
     }
+
+    draggedElement.style = "";
   }
 
   function dragOverHandler(e) {

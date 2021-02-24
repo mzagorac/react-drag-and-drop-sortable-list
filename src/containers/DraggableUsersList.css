@@ -1,5 +1,6 @@
 li {
-  margin: 5px;
+  /* margin: 5px; */
+  padding: 5px;
   list-style: none;
 }
 
@@ -10,4 +11,12 @@ li span {
 li span:last-child {
   color: grey;
   font-size: 0.9rem;
+}
+#username,
+#email {
+  display: block;
+}
+
+#email {
+  color: grey;
 }
