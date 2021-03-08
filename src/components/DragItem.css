@@ -1,9 +1,9 @@
 .drag-item {
-  width: 320px;
+  width: 90%;
   border: 1px solid #bdbdbd;
   background-color: white;
   margin: auto;
   cursor: grab;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   border-bottom: none;
 }

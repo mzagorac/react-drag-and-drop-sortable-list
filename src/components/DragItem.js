@@ -1,7 +1,7 @@
 import React from "react";
 import "./DragItem.css";
 
-export default function DragItem({ children, id, index, handleDraggedEl }) {
+export default function DragItem({ children, id, handleDraggedEl }) {
   function dragStartHandler(e) {
     e.target.style.opacity = "0.3";
 
@@ -11,13 +11,7 @@ export default function DragItem({ children, id, index, handleDraggedEl }) {
   }
 
   return (
-    <div
-      id={id}
-      index={index}
-      className="drag-item"
-      draggable
-      onDragStart={dragStartHandler}
-    >
+    <div id={id} className="drag-item" draggable onDragStart={dragStartHandler}>
       {children}
     </div>
   );

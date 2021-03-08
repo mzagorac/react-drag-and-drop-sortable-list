@@ -20,12 +20,7 @@ export default function DraggableUsersList() {
         draggedElement={draggedElement}
       >
         {users.map((user, i) => (
-          <DragItem
-            id={i}
-            index={i}
-            key={user.id}
-            handleDraggedEl={handleDraggedEl}
-          >
+          <DragItem id={i} key={user.id} handleDraggedEl={handleDraggedEl}>
             <li>
               <span id="username">{user.name}</span>
               <span id="email">{user.email}</span>
